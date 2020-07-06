@@ -37,8 +37,8 @@
         let parser = new DOMParser();
         let xml = parser.parseFromString(data, "application/xml");
         let xmlDoc = parser.parseFromString(data, 'text/xml');
-          console.log(xmlDoc.getElementsByTagName('drzava')[0].childNodes[0].nodeValue);
-          console.log(xmlDoc.documentElement.childNodes);
+          // console.log(xmlDoc.getElementsByTagName('drzava')[0].childNodes[0].nodeValue);
+          // console.log(xmlDoc.documentElement.childNodes);
 
         var i;
         var table="<thead class=\"thead-dark\"><tr><th>Datum</th><th>Valuta</th><th>Jedinica</th><th>Kupovni</th><th>Srednji</th><th>Prodajni</th><th>Kupovni</th><th>Srednji</th><th>Prodajni</th></tr></thead>";
@@ -75,7 +75,7 @@
               
       })
 
-      function updateTable() {
+    function updateTable() {
         var x, row;
         var amountOfMoney = document.getElementById("inputNumber").value;
         var stateName = document.getElementById("state");
@@ -100,12 +100,8 @@
             x[8].innerHTML = newProdajni.toFixed(6);
           }
         }
-      
-
-    }
-
+    };
     
-    window.updateTable = updateTable
 
 
 
